@@ -6,6 +6,8 @@ def check_num(number,number1):
 
 def check_big_num(number):
     try:
+        number = int(number)
+        1/number
         number = str(number)
         summ = 0
         step = 0
@@ -14,7 +16,7 @@ def check_big_num(number):
             summ += int(number[step])
             delit = delit * int(number[step])
             step+=1
-        return summ, delit
+        return [summ, delit]
     except ValueError:
         return "Не верный ввод"
     except ZeroDivisionError:
